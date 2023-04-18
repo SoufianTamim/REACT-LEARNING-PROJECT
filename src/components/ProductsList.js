@@ -1,9 +1,9 @@
 import { Products } from '../Data/Products';
 import Product from './Product';
 
-export default function ProductsList() {
+export default function ProductsList({OnclickHandler}) {
   const TheProductsList = Products.map((TheProduct) =>
-   <Product key={TheProduct.id} 
+   <Product OnclickHandler={OnclickHandler} key={TheProduct.id} 
    image={TheProduct.images[0]} 
    title={TheProduct.title} 
    price={TheProduct.price} 

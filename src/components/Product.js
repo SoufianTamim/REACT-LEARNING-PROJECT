@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Product({ image, title, description, id, price, category }) {
+export default function Product({ image, title, description, id, price, category ,OnclickHandler }) {
   const [showMore, SetShowMore] = useState(false);
   return (
     <div className="col">
@@ -15,7 +15,7 @@ export default function Product({ image, title, description, id, price, category
             <div className="col-md-6 text-center">{price} $</div>
             <div className="col-md-6 text-center">{category}</div>
           </div>
-          <button id={id} className="btn my-1 w-75 d-block mx-auto btn-primary">
+          <button id={id}  onClick={OnclickHandler} className="btn my-1 w-75 d-block mx-auto btn-primary">
             ADD TO CART
           </button>
         </div>
